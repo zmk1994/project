@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+<style>
+*{padding:0;margin:0;}
+li{list-style:none;}
+a{color:#ccc;text-decoration:none;}
+a:hover{color:#c31d1f;}
+.margin{width:1213px;margin:0 auto;}
+header{height:95px;box-shadow:0 1px 2px #666;}
+header img{display:block;float:left;}
+header div{float:right;margin-top:20px;font:16px/60px "";}
+header .pp{color:#999;}
+#main 
+#main #main-l{margin-top:15px;height:auto;margin-bottom:20px;}
+#main #main-l  ul{width:504px;height:auto;margin-left:188px;border-right:1px solid #ccc;}
+#main #main-l li{width:401px;height:51px;font:16px/51px "";
+border:1px solid #ccc;box-sizing:border-box;margin:15px 0;text-indent:10px;}
+#main #main-l li input{width:272px;height:40px;border:none;font:14px/51px "";color:#ccc;}
+#main #main-l .te{width:auto;border:none;}
+#main #main-l .te input{width:auto;}
+#main #main-l .te  a{color:#2f87f1;font:16px/50px "";}
+#main #main-l li .btn{width:400px;height:50px;background:#bd1627;color:#fff;float:left;display:block;}
+#main #main-l li.aa{border:0;height:20px;position:relative;}
+#main #main-l li.aa a{position:absolute;right:0;top:0;color:#2f87f1;}
+#main #main-l .txt4{width: 200px;}
+footer{text-align:center;height:60px;font:14px/30px "";padding-top:50px;border-top:1px solid #ccc;}
+footer span{margin:0 10px;}
+input{outline: none;}
+b{background: #F10215;width:16px;height: 16px;color: #fff;border-radius: 8px;display: block;float: left;text-align: center;font:8px/16px "";}
+.aa{display: none;}
+
+</style>
+</head>
+
+<body>
+<header class="margin">
+	<img src="img/logo.png">
+    <div><a href="../JD/index.html">已有账号？</a><a href="../JD/index.html" class="pp">请登陆</a></div>
+</header>
+
+<div id="main" class="margin">
+	<div id="main-l">
+    	<ul>
+        	<li>用户名　　<input type="text" class="txt1" placeholder="请输入账户名和登录名"></li>
+          		<div class="a1 aa"><b style="color: #fff;">-</b>仅支持数字字母，字母和下划线</div>
+        	<li>设置密码　<input type="text" class="txt2" placeholder="建议至少使用两种字符"></li>
+         		<div class="a2 aa"><b style="color: #fff;">-</b>仅支持纯数字</div>
+        	<li>确认密码　<input type="text" class="txt3" placeholder="请再次输入密码"></li>
+        	<div class="a3 aa"><b style="color: #fff;">-</b>仅支持纯数字</div>
+            	<li>中国0086　<input type="text" class="txt3" placeholder="请输入手机号"></option>
+                
+                
+               <li>验证码　　<input type="text" class="txt4" placeholder="建议使用手机"><a>ASDF</a></li>
+               <!--<li class="aa"><a href="#">邮箱验证</a></li>-->
+                <li>邮箱验证　<input type="text" class="txt5" placeholder="输入手机验证码"></li>
+                <div class="a4 aa"><b style="color: #fff;">-</b>九位数字</div>
+                <li>手机验证码　<input type="text" class="txt6" placeholder="输入手机验证码"></li>
+                <li class="te"><input type="radio">阅读并同意<a href="#">《京东用户注册协议》《隐私协议》</a></li ><li><input type="button" value="注册" class="btn"></li>
+        
+        </ul>
+        
+        
+    </div>
+</div>
+
+
+<footer class="margin">
+	<p><a href="#">友情连接</a><span>|</span><a href="#">友情连接</a><span>|</span><a href="#">友情连接</a><span>|</span><a href="#">友情连接</a><span>|</span></p>
+	<p>cody@qqcom版权所有</p>
+</footer>
+
+<script>
+			var oTxt=document.getElementsByTagName("input");
+			oTxt[0].onchange=function(){
+				var reg=/^0\d{2,3}-\d{7,8}$/
+				if(reg.test(oTxt[0].value)){
+					alert("格式正确")
+				}else{
+					alert("格式错误，请从新输入")
+				}
+			}
+			oTxt[1].onchange=function(){
+				var reg=/^(13|15|17|18)\d{9}$/
+				if(reg.test(oTxt[1].value)){
+					alert("格式正确")
+				}else{
+					alert("格式错误，请从新输入")
+				}
+			}
+			oTxt[2].onchange=function(){
+				var reg=/[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/
+				if(reg.test(oTxt[2].value)){
+					alert("格式正确")
+				}else{
+					alert("格式错误，请从新输入")
+				}
+			}
+	
+		$(".btn").click(function(){
+		location.href="index.html";
+		
+	})
+	
+	
+	
+	/*$(function(){
+		
+	//login
+	var oForm = document.getElementById("form");
+	var oIn1 = document.getElementById("input1");
+	var oIn2 = document.getElementById("input2");
+	var oErr = document.getElementById("ertip");
+	var oBtn = document.getElementById("btn");
+	//标识位
+	var flag = false;
+	var flag1 = flag2 =false;
+	//手机验证
+	function ain1(){
+		var regEmail = /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/;
+		var regPhone = /^1\d{10}$/;
+		if(oIn1.value == ""){
+			flag = false;
+			$("#ertip").show();
+			oErr.innerHTML = "请输入用户名/邮箱/手机号！"
+		}
+		else if(!regPhone.test(oIn1.value) || regEmail.test(oIn1.value)){
+			oErr.innerHTML = "用户名/邮箱/手机号(格式错误)";
+			flag = false;
+		}else{
+			$("#ertip").hide();
+			flag1=true;
+		}
+	}
+	
+	//密码验证
+	function ain2(){
+		if(oIn2.value ==""){
+			flag = false;
+			$("#ertip").show();
+			oErr.innerHTML = "请输入密码!"
+		}else if(oIn2.value.length<6 || oIn2.value.length>12){
+			oErr.innerHTML = "您输入的密码不正确";
+			flag = false;
+		}else{
+			$("#ertip").hide();
+			flag2=true;
+		}
+	}
+
+	oIn1.onblur=function(){
+		ain1();
+	}
+	oIn2.onblur=function(){
+		ain2();
+	}
+	
+//	console.log($("#btn"));
+	
+	
+	//点击登录验证
+	oBtn.onclick=function(){
+		ain1();
+		ain2();
+	}
+	$("#btn").click(function(){
+//		alert("aaa");
+		ain1();
+		ain2();
+		if(flag1&&flag2){
+				//ajax请求数据
+				$.ajax({
+					type:"get",
+					url:"login.json",
+					async:true,
+					success:function(data){
+						tit(data);
+					}
+				});
+				
+		}
+	})
+	
+
+	function tit(data){
+		console.log(data);
+		var val1 = oIn1.value;
+		var val2 = oIn2.value;
+		for(let i=0;i<data.length;i++){
+			if(val1==data[i].userName&&val2==data[i].password){
+				flag = true;
+			}
+		}
+		if(flag){
+//			alert("ok");
+			location.href = "index.html";
+		}
+		else{
+			$("#ertip").show();
+	 		oErr.innerHTML = "用户名密码不存在!"	
+		}
+	}
+
+
+
+
+})
+*/
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

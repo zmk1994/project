@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	</head>
+	<!--登录界面-->
+	<body>
+		<header class="margin">
+			<div class="logo">
+				<a href="#"><img src="loginimg/logo.png"></a>
+				<b>欢迎登录</b>
+			</div>			
+			<a href="#" class="sign">	
+				<span class="iconfont">&#xe832;</span>
+				<span>登录界面，调查问卷</span></a>
+		</header>
+		
+		<div id="content">
+			<div class="margin" id="content-t">
+			<div id="center" class="margin">
+				<div class="center-t">
+				
+					<a id="saoma" class="active">扫码登录</a>
+					<span>|</span>
+					<a id="zhanghao">账号登录</a>
+				</div>
+				<div class="center-c"> <!--style="display: none;"-->
+					<div class="photo">
+						<img src="loginimg/erwima.png" class="erweima"/>
+						<img src="loginimg/ipone.png" class="ipone"/>
+					</div>
+					<div class="pp">
+						<p>打开<a href="#">手机页面</a><b>扫描二维码</b></p>
+						<p><span class="iconfont">&#xe601;</span>免输入
+							<span class="iconfont">&#xe6ae;</span>更快
+							<span class="iconfont">&#xe65b;</span>更安全
+						</p>
+					</div>
+				</div>
+				<div class="center-c-c te" style="display: none;">
+					<div><span class="iconfont">&#xe831;</span><input type="text" placeholder="邮箱/用户名/已验证手机" class="uid"></div>
+					<div><span class="iconfont">&#xe61e;</span><input type="text" placeholder="密码" class="psd"></div>
+					<div>忘记密码</div>
+					<div><input type="button" value="登录" id="btn"></div>
+										
+				</div>
+				
+				<div class="center-f">
+					<a href="#"><span class="iconfont">&#xe73e;</span>QQ</a>
+					<a href="#"><span class="iconfont">&#xe600;</span>微信</a>
+					<a href="zhece.html"><span><i>&gt;</i></span>立即注册</a>
+					
+				</div>
+				
+			</div>
+			</div>
+		</div>
+		<footer>
+			<a href="#">关于我们</a><span>|</span>
+			<a href="#">联系我们</a><span>|</span>
+			<a href="#">人才招聘</a><span>|</span>
+			<a href="#">商家入驻</a><span>|</span>
+			<a href="#">广告服务</a><span>|</span>
+			<a href="#">手机京东</a><span>|</span>
+			<a href="#">友情链接</a><span>|</span>
+			<a href="#">销售联盟</a><span>|</span>
+			<a href="#">京东社区</a><span>|</span>
+			<a href="#">京东公益</a><span>|</span>
+			<a href="#">English site</a>
+			<p>Copyright © 2004-2017  京东JD.com 版权所有 </p>			
+		</footer>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			$(function(){
+						
+				
+			$("#btn").click(function(){
+				location.href="zhuce.html";
+			})
+				
+				
+				
+				
+				//setTimeout();//clear();
+				$(".center-c").height("296");//动态的设计高。
+				$(".photo").hide();
+				function move(){
+					$(".photo").fadeIn("slow");
+					$(".erweima").stop().animate({
+						left:"-330px"
+						
+					},400,function(){
+						$(".ipone").stop().animate({
+							left:"-170px"
+							
+						},800,
+						
+					function(){
+						var timer=setTimeout(function(){
+						$(".erweima").stop().animate({
+								left:"-260px"
+							},3000).siblings().fadeOut("slow")
+							
+					
+							
+						},2000)
+						
+					}
+						
+						/*,function(){
+							$(".erweima").animate({
+								left:0
+							},3000).siblings().hide()
+							
+						}*/)
+						
+					})
+				}
+		
+		
+		
+				var timer=setTimeout(function(){
+						$(".photo").show();
+						move();
+					
+				},400)						
+				})
+				
+				$(".photo").hover(function(){
+					$(".erweima").stop().animate({
+						left:"-340px"
+					},500).siblings().show()
+					
+				},function(){
+					$(".erweima").stop().animate({
+						left:"-250px"
+					},500).siblings().fadeOut()					
+				})
+					
+			
+				$("#zhanghao").click(function(){					
+				$(".te").show().siblings(".center-c").hide();
+				$(this).addClass("active").siblings("#saoma").removeClass("active");
+				$(".center-c").height("0");					
+				})
+				
+			
+				$("#saoma").click(function(){				
+					$(".center-c").show().siblings(".te").hide();
+					$(this).addClass("active").siblings("#zhanghao").removeClass("active");
+					$(".center-c").height("296");//动态的设计高。	
+						//move();
+				})
+				
+		
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+	/*
+			$("#btn").click(function(){
+			
+				var uid=$(".uid").val();
+				var psd=$(".psd").val();
+				$.ajax({
+					type:"get",
+					url:"logincl.php",
+					async:true,
+					data:"uid="+uid+"&"+"psd="+psd,
+					success:function(data){
+						if(data==0){
+							//后台没有数据的时候。
+							alert("账号密码有误，请重新输入");
+							//	清空字符串。
+							uid.trim();
+							psd.trim();
+							/*uid="";
+							psd="";
+						}else{
+							alert("zhengq")
+						}
+					}
+					
+						
+						
+				
+					
+				});*/
+				
+		
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			/*	$.ajax({
+					type:"get",
+					url:"logincl.php",
+					async:true,
+					data:"name="+$(".uid").val()+"&psd="+$("pid").val(),
+					success:function(data){
+					success:function(data){
+						if(data==0){
+							//后台没有数据的时候。
+							alert("账号密码有误，请重新输入");
+							//	清空字符串。
+							$(".uid").val(""),
+							$(".pid").val("");
+						}else{
+							alert("zhengq")
+						}
+						
+					}
+					
+				});
+				
+				
+			})
+			*/
+		</script>
+		
+		
+		
+	</body>
+</html>

@@ -1,0 +1,196 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.margin {
+	width: 990px;
+	margin: 0 auto;
+}
+
+nav {
+	background: #e3e4e5;
+	height: 30px;
+	font: 14px/36px "";
+}
+
+nav .nav-l {
+	float: left;
+	margin-right: 40px;
+}
+
+nav .nav-l li a.active {
+	color: #F10262;
+}
+
+nav .nav-r {
+	float: right;
+}
+
+nav .nav-l li {
+	float: left;
+}
+
+nav .nav-r li {
+	float: right;
+}
+
+nav li {
+	margin: 0 5px;
+}
+
+a:hover {
+	color: #F10215;
+}
+
+#logo {
+	height: 150px;
+}
+
+#logo .logo-l img {
+	display: block;
+	margin-right: 400px;
+	float: left
+}
+
+#logo .logo-r {
+	float: right;
+	margin: 20px 0;
+}
+
+#logo .logo-r .txt {
+	float: left;
+	width: 275px;
+	height: 27px;
+}
+
+#logo .logo-r .btn {
+	float: left;
+	height: 29px;
+	width: 27px;
+	background: #F10215;
+	color: #fff;
+	border: 0;
+}
+
+.logo-b {
+	height: 40px;
+	border: 1px solid #FFf900;
+	font: 14px/40px "";
+	background: #fffdee;
+}
+
+.logo-b a.active {
+	color: #F10215;
+	margin-right: 40px;
+	margin-left: 20px;
+}
+
+.logo-b i {
+	background: #F10215;
+	padding: 4px;
+}
+
+.main-l {
+	height: 50px;
+}
+
+.main-l .a-l a.active {
+	color: #F10215;
+}
+
+.main-l .a-l {
+	float: left;
+	font: 500 18px/40px "";
+}
+
+.main-l .a-r {
+	float: right;
+	font: 14px/40px "";
+}
+
+.main-l .a-r .address {
+	border: 1px solid #ccc;
+	width: 50px;
+	height: 30px;
+}
+
+.main-c {
+	font: 14px/60px "";
+	background: #f3f3f3;
+	height: 60px;
+}
+
+.main-c ul li {
+	float: left;
+	margin: 0 10px;
+}
+
+.main-c .tt {
+	margin-right: 500px;
+}
+
+.p {
+	font: 500 14px/60px "";
+	border-bottom: 2px solid #ccc;
+}
+
+.p2 {
+	font: 14px/40px "";
+}
+
+.pro {
+	height: 123px;
+	background: #fff4e8;
+	font: 14px/25px "";
+}
+
+.pro input {
+	float: left;
+}
+
+.pro img {
+	float: left;
+}
+
+.pro-p {
+	float: left;
+	margin-right: 40px;
+}
+
+.pro span {
+	margin:0 20px;
+	width: 79px;
+	height:30px;
+}
+.pro span a{
+	padding:0 5px;
+border:1px solid #ccc;
+
+}
+
+.pro span b{
+		padding:0 5px;
+	border:1px solid #ccc;
+
+}
+
+.list{
+		margin-top:20px;
+		height: 236px;
+		border:1px solid #ccc;
+}
+
+.list  ul{height:236px;}
+.list  ul li{width:240px;float: left;font:14px/26px "";}
+.list  ul li img{width: 150px;height:150px;margin-top:10px;}
+.list  ul li a{border:1px solid #ccc;color:#F10215;padding:4px;}
+.ff{height: auto;margin:20px 0;}
+
+#shop{height:30px;font:14px/30px "";padding:20px 0;}
+#shop b{border:1px solid #ccc;padding: 10px;color: #F10215;}
+
+
+
+
+
